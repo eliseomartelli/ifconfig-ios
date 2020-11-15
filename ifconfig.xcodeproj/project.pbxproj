@@ -13,6 +13,14 @@
 		553986CE256114FB00F858E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553986CD256114FB00F858E4 /* Preview Assets.xcassets */; };
 		553986D9256114FC00F858E4 /* ifconfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553986D8256114FC00F858E4 /* ifconfigTests.swift */; };
 		553986E4256114FC00F858E4 /* ifconfigUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553986E3256114FC00F858E4 /* ifconfigUITests.swift */; };
+		553986F62561152000F858E4 /* Ifconfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553986F52561152000F858E4 /* Ifconfig.swift */; };
+		553986FB2561159900F858E4 /* Port.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553986FA2561159900F858E4 /* Port.swift */; };
+		55398701256115FA00F858E4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55398700256115FA00F858E4 /* Utils.swift */; };
+		553987062561165800F858E4 /* IfconfigAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553987052561165800F858E4 /* IfconfigAPI.swift */; };
+		5539870F25611A2E00F858E4 /* IfconfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539870E25611A2E00F858E4 /* IfconfigView.swift */; };
+		5539871425611A7600F858E4 /* PortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539871325611A7600F858E4 /* PortView.swift */; };
+		5539871925611AD200F858E4 /* IfconfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539871825611AD200F858E4 /* IfconfigViewModel.swift */; };
+		553987252561214800F858E4 /* PortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553987242561214800F858E4 /* PortViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,14 @@
 		553986DF256114FC00F858E4 /* ifconfigUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ifconfigUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		553986E3256114FC00F858E4 /* ifconfigUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ifconfigUITests.swift; sourceTree = "<group>"; };
 		553986E5256114FC00F858E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		553986F52561152000F858E4 /* Ifconfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ifconfig.swift; sourceTree = "<group>"; };
+		553986FA2561159900F858E4 /* Port.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Port.swift; sourceTree = "<group>"; };
+		55398700256115FA00F858E4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		553987052561165800F858E4 /* IfconfigAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfconfigAPI.swift; sourceTree = "<group>"; };
+		5539870E25611A2E00F858E4 /* IfconfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfconfigView.swift; sourceTree = "<group>"; };
+		5539871325611A7600F858E4 /* PortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortView.swift; sourceTree = "<group>"; };
+		5539871825611AD200F858E4 /* IfconfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfconfigViewModel.swift; sourceTree = "<group>"; };
+		553987242561214800F858E4 /* PortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,7 @@
 		553986BA256114F900F858E4 = {
 			isa = PBXGroup;
 			children = (
+				553986FF256115BD00F858E4 /* Common */,
 				553986C5256114F900F858E4 /* ifconfig */,
 				553986D7256114FC00F858E4 /* ifconfigTests */,
 				553986E2256114FC00F858E4 /* ifconfigUITests */,
@@ -95,6 +112,8 @@
 		553986C5256114F900F858E4 /* ifconfig */ = {
 			isa = PBXGroup;
 			children = (
+				5539871D25611AFB00F858E4 /* ViewModels */,
+				5539870D25611A1D00F858E4 /* Views */,
 				553986C6256114F900F858E4 /* ifconfigApp.swift */,
 				553986C8256114F900F858E4 /* ContentView.swift */,
 				553986CA256114FB00F858E4 /* Assets.xcassets */,
@@ -128,6 +147,43 @@
 				553986E5256114FC00F858E4 /* Info.plist */,
 			);
 			path = ifconfigUITests;
+			sourceTree = "<group>";
+		};
+		553986F42561150C00F858E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				553986F52561152000F858E4 /* Ifconfig.swift */,
+				553986FA2561159900F858E4 /* Port.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		553986FF256115BD00F858E4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				553986F42561150C00F858E4 /* Models */,
+				55398700256115FA00F858E4 /* Utils.swift */,
+				553987052561165800F858E4 /* IfconfigAPI.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5539870D25611A1D00F858E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5539870E25611A2E00F858E4 /* IfconfigView.swift */,
+				5539871325611A7600F858E4 /* PortView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5539871D25611AFB00F858E4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				553987242561214800F858E4 /* PortViewModel.swift */,
+				5539871825611AD200F858E4 /* IfconfigViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55398701256115FA00F858E4 /* Utils.swift in Sources */,
+				5539871425611A7600F858E4 /* PortView.swift in Sources */,
+				553987062561165800F858E4 /* IfconfigAPI.swift in Sources */,
+				553987252561214800F858E4 /* PortViewModel.swift in Sources */,
 				553986C9256114F900F858E4 /* ContentView.swift in Sources */,
 				553986C7256114F900F858E4 /* ifconfigApp.swift in Sources */,
+				553986FB2561159900F858E4 /* Port.swift in Sources */,
+				5539870F25611A2E00F858E4 /* IfconfigView.swift in Sources */,
+				5539871925611AD200F858E4 /* IfconfigViewModel.swift in Sources */,
+				553986F62561152000F858E4 /* Ifconfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
