@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-class IfconfigViewModel: NSObject, ObservableObject {
-    @Published var ifconfig: Ifconfig?
+class PortViewModel: NSObject, ObservableObject {
+    @Published var port: Port?
     @Published var isLoading = false
     @Published var error: Error?
 
@@ -18,17 +18,17 @@ class IfconfigViewModel: NSObject, ObservableObject {
         self.service = service
     }
     
-    func getIfconfig() {
+    func getPort(port: Int) {
         self.isLoading = true
         self.error = nil
 
-        service.getIfconfig { [weak self] (result) in
+        service.getPort(port: port) { [weak self] (result) in
             guard let self = self else { return }
             self.isLoading = false
             
             switch result {
-                case .success(let ifconfig):
-                    self.ifconfig = ifconfig
+                case .success(let port):
+                    self.port = port
                 case .failure(let error):
                     self.error = error
             }
